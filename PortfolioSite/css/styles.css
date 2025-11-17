@@ -1,0 +1,262 @@
+/* ===== Reset & Base Styles ===== */
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+body {
+    font-family: 'Helvetica Neue', Arial, sans-serif;
+    line-height: 1.7;
+    background-color: #f9f9f5;
+    color: #1b1b1b;
+    padding: 20px;
+}
+
+/* ===== Navigation ===== */
+nav {
+    background-color: #204e40;
+    box-shadow: 0 3px 6px rgba(0, 0, 0, 0.1);
+}
+
+nav ul {
+    list-style: none;
+    display: flex;
+    justify-content: center;
+    padding: 10px 0;
+    flex-wrap: wrap;
+}
+
+nav li {
+    margin: 0 1rem;
+}
+
+nav a {
+    color: #f9f9f5;
+    text-decoration: none;
+    font-weight: 600;
+    padding: 8px 15px;
+    border-radius: 4px;
+    transition: color 0.3s;
+}
+
+nav a:hover {
+    background-color: #c6dfd3;
+    color: #204e40;
+}
+
+/* ===== Main Section ===== */
+main {
+    max-width: 900px;
+    margin: 50px auto;
+    padding: 0 20px;
+    text-align: center; 
+}
+
+h1 {
+    color:#204e40;
+    font-size: 2.2rem;
+    margin-bottom: 20px;
+    position: relative;
+    display: inline-block;
+}
+
+h1::before {
+    content: '';
+    position: absolute;
+    left: -15px;
+    top: 50%;
+    transform: translateY(-50%);
+    width: 5px;
+    height: 100%;
+    background-color: #204e40;
+}
+
+p {
+    margin-bottom: 25px;
+    color: #333;
+    text-align: left; 
+}
+
+/* ===== Images ===== */
+main img {
+    max-width: 70%;
+    max-height: 600px;
+    height: auto;
+    display: block;
+    margin: 20px auto;
+    border-radius: 10px;
+    box-shadow: 0 5px 15px rgba(0, 0, 0, 0.1);
+}
+
+/* ===== Footer ===== */
+footer {
+    background-color: #204e40;
+    color: #f9f9f5;
+    text-align: center;
+    padding: 20px 10px;
+    margin-top: 50px;
+    font-size: 0.95rem;
+}
+
+/* ===== Links in Body ===== */
+a {
+    color: #204e40;
+}
+a:hover {
+    text-decoration: underline;
+}
+
+/* ===== Responsive ===== */
+@media (max-width: 768px)   {
+    main {
+        padding: 0 15px;
+    }
+    nav ul {
+        flex-direction: column;
+    }
+    nav li {
+        margin: 0.5rem 0;
+    }
+    h1::before {
+        left: -10px;   
+    }
+}
+
+/* ====Projects Page Card Styles =====*/
+#projects-container {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 20px;
+  justify-content: center;
+  padding: 20px 0;
+}
+
+.project-card {
+  background-color: #f2f2f2; /* light grey background */
+  border-radius: 8px;
+  width: 250px;       /* card width */
+  box-shadow: 0 2px 6px rgba(0,0,0,0.2);
+  padding: 15px;
+  text-align: center;
+  transition: transform 0.2s;
+}
+
+.project-card:hover {
+  transform: translateY(-5px);
+}
+
+.project-card img {
+  max-width: 100%;
+  height: auto;
+  border-radius: 4px;
+}
+
+.project-card h3 {
+  margin: 10px 0 5px 0;
+  font-size: 1.2rem;
+}
+
+.project-card p {
+  font-size: 0.9rem;
+  color: #333;
+}
+
+.project-card a {
+  display: inline-block;
+  margin-top: 10px;
+  padding: 5px 10px;
+  text-decoration: none;
+  color: white;
+  background-color: #004d40; /* dark green */
+  border-radius: 4px;
+  font-size: 0.9rem;
+}
+.project-card a:hover {
+  background-color: #00695c; /* slightly lighter green */
+}
+
+/* ==== ABOUT PAGE ==== */
+#toggle-bio {
+  padding: 5px 12px;
+  font-size: 1rem;
+  background-color: #004d40;
+  color: white;
+  border: none;
+  border-radius: 4px;
+  cursor: pointer;
+}
+
+#toggle-bio:hover {
+  background-color: #00695c;
+}
+
+#bio {
+  margin-top: 10px;
+  padding: 10px;
+  background-color: #e0f2f1; /* very light green background */
+  border-left: 4px solid #004d40;
+  border-radius: 4px;
+  line-height: 1.4;
+}
+
+/* ==== CONTACT PAGE ==== */
+#contact-form {
+  display: flex;
+  flex-direction: column;
+  max-width: 300px;
+  margin: 20px auto;
+}
+
+#contact-form input {
+  padding: 8px;
+  margin-bottom: 10px;
+  border: 1px solid #ccc;
+  border-radius: 4px;
+}
+
+#contact-form button {
+  padding: 8px;
+  background-color: #004d40;
+  color: white;
+  border: none;
+  border-radius: 4px;
+  cursor: pointer;
+}
+
+#contact-form button:hover {
+  background-color: #00695c;
+}
+
+#message {
+  margin-top: 10px;
+  text-align: center;
+  font-weight: bold;
+}
+
+/* ==== NAVBAR ==== */
+.navbar {
+  display: flex;
+  justify-content: center;
+  list-style: none;
+  padding: 10px 0;
+  margin: 0;
+  background-color: #004d40; /* dark green */
+}
+
+.navbar li {
+  margin: 0 15px;
+}
+
+.navbar a {
+  text-decoration: none;
+  color: white;
+  font-weight: bold;
+  padding: 5px 10px;
+  transition: background-color 0.2s;
+  border-radius: 4px;
+}
+
+.navbar a:hover {
+  background-color: #00695c; /* lighter green */
+}
